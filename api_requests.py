@@ -12,13 +12,23 @@ def fetch_covid_data():
         response = requests.get(url + country)
         data = response.json()
 
-        # Write data to CSV
-        filename = f"{country.lower()}_covid_data.csv"
-        with open(filename, 'w', newline='') as csvfile:
-            fieldnames = data.keys()
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerow(data)
+
+# Example data and country name
+data = {'Date': '2024-05-01', 'Cases': 1000, 'Deaths': 50}
+country = 'USA'
+
+# Specifying the full path where you want to save the CSV file
+file_path = '/Users/meghasingh/Desktop/Spark assignment/api_folder'
+
+# Constructing the filename with the full path
+filename = f"{file_path}{country.lower()}_covid_data.csv"
+
+# Write data to CSV
+with open(filename, 'w', newline='') as csvfile:
+    fieldnames = data.keys()
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow(data)
 
 if __name__ == "__main__":
     fetch_covid_data()
