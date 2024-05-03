@@ -4,7 +4,7 @@ Data Collection:
 Using the RapidAPI service, I accessed the 'https://disease.sh/v3/covid-19/countries/{country_name}' API to retrieve the latest COVID-19 data for a diverse set of countries. This data includes information such as total confirmed cases, total deaths, total recoveries, and critical cases. I meticulously compiled this data and organized it into a CSV file for further analysis.
 
 1.First download all the files as a zip and extract them in your code editor. 
-2.Run api_requests.py to fetch all the csv files from given api.
+2.Run api_requests.py to fetch all the csv files from given api (all the csv files are in api_folder for reference).
 3.df.ipynb should be run to merge all the csv and make a dataframe.
 4.Then run ques1_restapi.py to fetch all the covid data.
 5.run all the q2.1 to start server request
